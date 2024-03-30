@@ -1,0 +1,19 @@
+// C++ code
+//
+
+ int sensor=0;
+void setup()
+{
+  pinMode(A0,INPUT);
+  pinMode(9,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  sensor=analogRead(A0);
+  Serial.println(sensor);
+ analogWrite(9,map(sensor,0,1023,255,0));
+  delay(1000);
+ 
+}

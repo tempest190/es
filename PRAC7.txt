@@ -1,0 +1,22 @@
+// C++ code
+//
+int sstate=0;
+void setup()
+{
+  pinMode(2,INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  sstate=digitalRead(2);
+  if(sstate==HIGH){
+  digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  { 
+  // Wait for 1000 millisecond(s)
+  digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10); // Wait for 1000 millisecond(s)
+}
